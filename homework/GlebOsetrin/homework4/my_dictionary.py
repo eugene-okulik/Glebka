@@ -10,17 +10,15 @@ Set = {4, 8, 12, 16.5, 'very_fun', True}
 Set.add('song')
 Set.remove(12)
 
-Dict = {'My name': 'Gleb',
+Dict ={'My name': 'Gleb',
         'My surname': 'Osetrin',
         'My age': '30',
         'My job': 'QA Engineer',
         'My hobby': 'swim'
-    }
+     }
 
-Dict['i am a tuple', ] = 'New word'
+Dict[('i am a tuple',)] = 'New word'
 Dict.pop('My hobby')
 
 mydict = {'list': List, 'tuple': Tuple, 'set': Set, 'dict': Dict}
 print(mydict)
-
-
