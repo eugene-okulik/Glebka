@@ -1,11 +1,7 @@
 person = ['John', 'Doe', 'New York', '+1372829383739', 'US']
-name = 'John'
-last_name = 'Doe'
-city = 'New York'
-phone = '+1372829383739'
-country = 'US'
-# я не понял первое задание :( перевел дословно и сделал дословно
-# и есть ли разница в питоне между " и '
+name, last_name, city, phone, country = person
+# print(city)
+
 result1 = 'результат операции: 42'
 result2 = 'результат операции: 514'
 result3 = 'результат работы программы: 9'
@@ -28,5 +24,4 @@ students = ['Ivanov', 'Petrov', 'Sidorov']
 subjects = ['math', 'biology', 'geography']
 my_text = 'Students {} study these subjects: {}'
 my_text = my_text.format(', '.join(students), ', '.join(subjects))
-# я не знаю откуда появилось args, оно почему-то ставится автоматически в пайчарме и не удаляется
 print(my_text)
