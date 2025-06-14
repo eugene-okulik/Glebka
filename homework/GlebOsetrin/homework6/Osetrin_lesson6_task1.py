@@ -9,12 +9,12 @@
 text = ("Etiam tincidunt neque erat, quis molestie enim imperdiet vel. Integer urna nisl, "
         "facilisis vitae semper at, dignissim vitae libero")
 words = text.split()
-result_worlds = []
+result_words = []
 for word in words:
-    if word.endswith(".") or word.endswith(","):
-        new_word = word[:-1] + 'ing' + word[-1]
+    if word.endswith(",") or word.endswith("."):
+        new_word = word[:-1] + "ing" + word[-1]
     else:
-        new_word = word + 'ing'
-        result_worlds.append(new_word)
-new_text = "".join(result_worlds)
+        new_word = word + "ing"
+    result_words.append(new_word)
+new_text = " ".join(result_words)
 print(new_text)
