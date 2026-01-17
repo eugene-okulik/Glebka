@@ -1,1 +1,1 @@
-QQ
+print('Hello world!')
