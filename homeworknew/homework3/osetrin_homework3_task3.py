@@ -6,3 +6,6 @@ g = (c * d) ** 0.5      # g = корень c * d
 
 print(a)
 print(g)
+
+
+
