@@ -25,7 +25,7 @@ setone.add('winter')
 setone.remove(2)
 # print(setone)
 
-my_dict = {'list': 'value1', 'tuple': 'value2', 'set': 'value3', 'dict': 'value3'}
+my_dict = {'list': 'listone', 'tuple': 'tupleone', 'set': 'setone', 'dict': 'dictone'}
 # print(my_dict['set'])
 # my_dict['five'] = True
 # my_dict['six'] = {1, 7, 33}
