@@ -19,13 +19,14 @@ dictone['i am a tuple'] = 'key1'
 dictone.pop('age')
 # (dictone)
 
-setone = {2, 5, 8, 11, 'six', 'five','big', 25, False}
+setone = {2, 5, 8, 11, 'six', 'five', 'big', 25, False}
 setone.add('winter')
 # print(setone)
 setone.remove(2)
 # print(setone)
 
-my_dict = {'list': 'listone', 'tuple': 'tupleone', 'set': 'setone', 'dict': 'dictone'}
+my_dict = {'list': listone, 'tuple': tupleone, 'set': setone, 'dict': dictone}
+print(my_dict)
 # print(my_dict['set'])
 # my_dict['five'] = True
 # my_dict['six'] = {1, 7, 33}
