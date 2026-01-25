@@ -7,11 +7,11 @@ listone.pop(1)
 # print(listone)
 
 dictone = {
-    'name' : 'Gleb',
-    'sername' : 'Osetrin',
-    'age' : '30',
-    'hobby' : 'work',
-    'city' : 'Perm'
+    'name': 'Gleb',
+    'sername': 'Osetrin',
+    'age': '30',
+    'hobby': 'work',
+    'city': 'Perm'
 }
 # print(dictone)
 dictone['i am a tuple'] = 'key1'
@@ -25,7 +25,7 @@ setone.add('winter')
 setone.remove(2)
 # print(setone)
 
-my_dict = {'list' : 'value1', 'tuple' : 'value2', 'set': 'value3', 'dict': 'value3'}
+my_dict = {'list': 'value1', 'tuple': 'value2', 'set': 'value3', 'dict': 'value3'}
 # print(my_dict['set'])
 # my_dict['five'] = True
 # my_dict['six'] = {1, 7, 33}
