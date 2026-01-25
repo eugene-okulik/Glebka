@@ -6,7 +6,12 @@ listone.append('text')
 listone.pop(1)
 # print(listone)
 
-dictone = {'name' : 'Gleb', 'sername' : 'Osetrin', 'age' : '30', 'hobby' : 'work', 'city' : 'Perm'}
+dictone = {'name' : 'Gleb',
+           'sername' : 'Osetrin',
+           'age' : '30',
+           'hobby' : 'work',
+           'city' : 'Perm'
+}
 # print(dictone)
 dictone['i am a tuple'] = 'key1'
 # print(dictone)
