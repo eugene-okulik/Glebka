@@ -11,7 +11,7 @@ dictone = {'name' : 'Gleb',
            'age' : '30',
            'hobby' : 'work',
            'city' : 'Perm'
-}
+           }
 # print(dictone)
 dictone['i am a tuple'] = 'key1'
 # print(dictone)
