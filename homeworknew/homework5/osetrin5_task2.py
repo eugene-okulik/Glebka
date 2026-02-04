@@ -19,3 +19,4 @@ number_str3 = operation3[colon_index3 + 2:]
 number = int(number_str3)
 result = number + 21
 print(result)
+
