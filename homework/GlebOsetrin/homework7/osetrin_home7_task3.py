@@ -1,3 +1,4 @@
+
 def strong_line(line):
     return int(line.split(':')[1]) + 10
 
