@@ -3,13 +3,15 @@ def fibonaci(limit = 1000000):
     b = 1
     count = 1
 
-
     while count < limit:
         yield a
         a, b = b, a + b
         count += 1
 
+
 count = 1
+
+
 for number in fibonaci(100000000):
     if count == 5:
         print('пятое', number)
