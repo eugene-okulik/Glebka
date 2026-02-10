@@ -1,4 +1,4 @@
-def fibonaci(limit = 1000000):
+def fibonaci(limit=1000000):
     a = 1
     b = 1
     count = 1
