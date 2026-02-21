@@ -3,19 +3,24 @@ def finish_me(func):
         result = func(*args, **kwargs)
         print('finished')
         return result
+
     return wrapper
+
 
 @finish_me
 def example():
     print('I love python')
 
+
 @finish_me
 def example2():
     print('very much')
 
+
 @finish_me
 def example3():
     print('and python is very good programm')
+
 
 example()
 example2()

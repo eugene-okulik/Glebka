@@ -8,7 +8,9 @@ def decorator(func):
             return func(a, b, '-')
         elif a < b:
             return func(a, b, '/')
+
     return wrapper
+
 
 @decorator
 def calc(first, second, operation):
@@ -20,6 +22,7 @@ def calc(first, second, operation):
         return first * second
     elif operation == '/':
         return first / second
+
 
 print(calc(3, 4))
 print(calc(5, 5))
