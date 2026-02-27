@@ -49,14 +49,14 @@ school_book3 = SchoolBook('География', 'Смирнова', 222, 'Гео
 for book in [school_book1, school_book2, school_book3]:
     if book.reserved:
         print(
-            f"Название книги: {book.title}, Автор: {book.author}, "
-            f"Всего страниц: {book.pages}, "
-            f"Предмет: {book.school_subject}, класс: {book.school_class}, "
-            f"зарезервирована"
+            f'Название книги: {book.title}, Автор: {book.author}, '
+            f'Всего страниц: {book.pages}, '
+            f'Предмет: {book.school_subject}, класс: {book.school_class}, '
+            f'зарезервирована'
         )
     else:
         print(
-            f"Название книги: {book.title}, Автор: {book.author}, "
-            f"Всего страниц: {book.pages}, "
-            f"Предмет: {book.school_subject}, класс: {book.school_class}"
+            f'Название книги: {book.title}, Автор: {book.author}, '
+            f'Всего страниц: {book.pages}, '
+            f'Предмет: {book.school_subject}, класс: {book.school_class}'
         )
