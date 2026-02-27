@@ -19,11 +19,13 @@ book5 = Book('Властелин колец', 'Толкин', 1140, '111-555', F
 
 for book in [book1, book2, book3, book4, book5]:
     if book.reserved:
-        print(f'Название книги: {book.title}, Автор: {book.author}, Всего страниц: {book.pages}, '
+        print(
+            f'Название книги: {book.title}, Автор: {book.author}, Всего страниц: {book.pages}, '
             f'Материал: {Book.page_material}, зарезервирована'
         )
     else:
-        print(f'Название книги: {book.title}, Автор: {book.author}, Всего страниц: {book.pages},'
+        print(
+            f'Название книги: {book.title}, Автор: {book.author}, Всего страниц: {book.pages},'
             f'Материал: {Book.page_material}'
         )
 
@@ -46,8 +48,15 @@ school_book3 = SchoolBook('География', 'Смирнова', 222, 'Гео
 
 for book in [school_book1, school_book2, school_book3]:
     if book.reserved:
-        print(f'Название книги: {book.title}, Автор: {book.author}, Всего страниц: {book.pages}, '
-                f'Предмет: {book.school_subject}, класс: {book.school_class}, зарезервирована')
+        print(
+            f"Название книги: {book.title}, Автор: {book.author}, "
+            f"Всего страниц: {book.pages}, "
+            f"Предмет: {book.school_subject}, класс: {book.school_class}, "
+            f"зарезервирована"
+        )
     else:
-         print(f'Название книги: {book.title}, Автор: {book.author}, Всего страниц: {book.pages}, '
-                f'Предмет: {book.school_subject}, класс: {book.school_class}')
+        print(
+            f"Название книги: {book.title}, Автор: {book.author}, "
+            f"Всего страниц: {book.pages}, "
+            f"Предмет: {book.school_subject}, класс: {book.school_class}"
+        )
