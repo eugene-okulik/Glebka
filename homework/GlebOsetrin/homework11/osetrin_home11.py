@@ -10,20 +10,22 @@ class Book:
         self.reserved = reserved
 
 
-book1 = Book('Идиот', 'Достоевский', 640, 111-111, False)
-book2 = Book('Война и мир', 'Толстой', 1640, 111-222, False)
-book3 = Book('Мастер и маргарита', 'Булгаков', 540, 111-333, False)
-book4 = Book('Гарри Поттер', 'Кэтлин', 840, 111-444, True)
-book5 = Book('Властелин колец', 'Толкин', 1140, 111-555, False)
+book1 = Book('Идиот', 'Достоевский', 640, '111-111', False)
+book2 = Book('Война и мир', 'Толстой', 1640, '111-222', False)
+book3 = Book('Мастер и маргарита', 'Булгаков', 540, '111-333', False)
+book4 = Book('Гарри Поттер', 'Кэтлин', 840, '111-444', True)
+book5 = Book('Властелин колец', 'Толкин', 1140, '111-555', False)
 
 
 for book in [book1, book2, book3, book4, book5]:
     if book.reserved:
         print(f'Название книги: {book.title}, Автор: {book.author}, Всего страниц: {book.pages}, '
-              f'Материал: {Book.page_material}, зарезервирована')
+            f'Материал: {Book.page_material}, зарезервирована'
+        )
     else:
-         print(f'Название книги: {book.title}, Автор: {book.author}, Всего страниц: {book.pages},'
-               f'Материал: {Book.page_material}')
+        print(f'Название книги: {book.title}, Автор: {book.author}, Всего страниц: {book.pages},'
+            f'Материал: {Book.page_material}'
+        )
 
 
 class SchoolBook(Book):
