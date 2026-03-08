@@ -1,6 +1,5 @@
 class Flower:
 
-
     def __init__(self, name, color, price, life_days, stem_length):
         self.name = name
         self.color = color
@@ -8,14 +7,11 @@ class Flower:
         self.life_days = life_days
         self.stem_length = stem_length
 
-
     def __str__(self):
         return f'{self.name} {self.color}'
 
 
 class Rose(Flower):
-
-
     def __init__(self, color, stem_length):
         super().__init__('Rose', color, 400, 8, stem_length)
 
