@@ -19,13 +19,7 @@ class Bouquet:
         return total / len(self.flowers)
 
     def sort_by_price(self):
-
-        for x in range(len(self.flowers)):
-            for y in range(x + 1, len(self.flowers)):
-                if self.flowers[x].price > self.flowers[y].price:
-                    temp = self.flowers[x]
-                    self.flowers[x] = self.flowers[y]
-                    self.flowers[y] = temp
+        self.flowers.sort(key=lambda x: x.price)
 
     def find_by_life(self, days):
         result = []

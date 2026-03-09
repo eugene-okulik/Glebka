@@ -8,7 +8,10 @@ class Flower:
         self.stem_length = stem_length
 
     def __str__(self):
-        return f'{self.name} {self.color}'
+        return f'{self.name} ({self.color}, {self.stem_length}см, {self.price}рублей, {self.life_days}дней)'
+
+    def __repr__(self):
+        return self.__str__()
 
 
 class Rose(Flower):
@@ -28,4 +31,4 @@ class Gerbera(Flower):
 
 class Lily(Flower):
     def __init__(self, color, stem_length):
-        super().__init__('Lily', color, 450, 12, stem_length)
+        super().__init__('Lily', color, 450, 6, stem_length)
