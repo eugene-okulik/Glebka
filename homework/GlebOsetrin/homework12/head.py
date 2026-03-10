@@ -32,7 +32,7 @@ print(bouquet.total_price())
 print('Среднее время жизни:')
 print(bouquet.life_time())
 
-bouquet.sort_by_price()
+bouquet.sort_by('price')
 
 print('Сортировка по цене:')
 print(bouquet.flowers)

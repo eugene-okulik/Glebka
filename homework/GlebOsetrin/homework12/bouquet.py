@@ -18,8 +18,8 @@ class Bouquet:
             total = total + flower.life_days
         return total / len(self.flowers)
 
-    def sort_by_price(self):
-        self.flowers.sort(key=lambda x: x.price)
+    def sort_by(self, key):
+        self.flowers.sort(key=lambda x: getattr(x, key))
 
     def find_by_life(self, days):
         result = []
