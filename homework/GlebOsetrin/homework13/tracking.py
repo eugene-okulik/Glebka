@@ -5,13 +5,16 @@ base_path = os.path.dirname(__file__)
 file_path = os.path.join(base_path, '..', '..', 'eugene_okulik', 'hw_13', 'data.txt')
 print(file_path)
 
+
 def read_file():
-    with open(file_path, 'r', encoding= 'utf-8') as data_file:
+    with open(file_path, 'r', encoding='utf-8') as data_file:
         for line in data_file.readlines():
             yield line
 
+
 for line in read_file():
     print(line.strip())
+
 
 for line in read_file():
     line = line.split('. ', 1)[1]
