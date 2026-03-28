@@ -9,33 +9,37 @@ db = mysql.connect(
 )
 
 cursor = db.cursor()
+
 cursor.execute(
-    'INSERT INTO `groups` (title, start_date, end_date) VALUES (%s, %s, %s)',
-    ('QATesters', '2026-03-01', '2027-04-01')
+    'INSERT INTO students (name, second_name) VALUES (%s, %s)',
+    ('Dima', 'Mamkin')
 )
+db.commit()
+
+student_id = cursor.lastrowid
+print('student_id:', student_id)
+
 cursor.execute(
     'INSERT INTO `groups` (title, start_date, end_date) VALUES (%s, %s, %s)',
     ('QATesters', '2026-03-01', '2027-04-01')
 )
 db.commit()
 group_id = cursor.lastrowid
-print("group_id:", group_id)
+print('group_id:', group_id)
 
 cursor.execute(
-    'INSERT INTO students (name, second_name, group_id) VALUES (%s, %s, %s)',
-    ('Dima', 'Mamkin', group_id)
+    'UPDATE students SET group_id = %s WHERE id = %s',
+    (group_id, student_id)
 )
 db.commit()
-student_id = cursor.lastrowid
-print("student_id:", student_id)
 
 books = ['QABest', 'Python best', 'Okulik best']
-for book in books:
-    cursor.execute(
-        'INSERT INTO books (title, taken_by_student_id) VALUES (%s, %s)',
-        (book, student_id)
-    )
+cursor.executemany(
+    'INSERT INTO books (title, taken_by_student_id) VALUES (%s, %s)',
+    [(book, student_id) for book in books]
+)
 db.commit()
+
 subjects = ['Databases', 'Programming', 'Testing']
 subject_ids = []
 
@@ -68,11 +72,15 @@ db.commit()
 print('lesson_ids:', lesson_ids)
 marks = [5, 5, 4, 4, 5, 5]
 
-for lesson_id, mark in zip(lesson_ids, marks):
-    cursor.execute(
-        'INSERT INTO marks (student_id, lesson_id, value) VALUES (%s, %s, %s)',
-        (student_id, lesson_id, mark)
-    )
+data = [
+    (student_id, lesson_id, mark)
+    for lesson_id, mark in zip(lesson_ids, marks)
+]
+
+cursor.executemany(
+    'INSERT INTO marks (student_id, lesson_id, value) VALUES (%s, %s, %s)',
+    data
+)
 
 db.commit()
 cursor.execute(
