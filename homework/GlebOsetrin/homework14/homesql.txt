@@ -1,4 +1,4 @@
-INSERT INTO students (name, second_name, group_id) VALUES ('Dima', 'Mamkin', 1)
+INSERT INTO students (name, second_name) VALUES ('Dima', 'Mamkin')
 
 -- SELECT * FROM students
 
