@@ -16,7 +16,9 @@ def setup_object():
     }
 
     response = requests.post(URL, json=body, headers=HEADERS)
-    assert response.status_code == 200
+
+    if response.status_code != 200:
+        pytest.fail(f"Не удалось создать объект. Status: {response.status_code}")
 
     obj_id = response.json()["id"]
     print(f"Object created: {obj_id}")
@@ -101,17 +103,8 @@ def test_get(setup_object):
     assert response.json()["id"] == obj_id
 
 
-def test_delete():
-    body = {
-        "name": "DeleteMe",
-        "data": {
-            "year": 2026,
-            "price": 100
-        }
-    }
-
-    create = requests.post(URL, json=body, headers=HEADERS)
-    obj_id = create.json()["id"]
+def test_delete(setup_object):
+    obj_id = setup_object
 
     response = requests.delete(f"{URL}/{obj_id}")
 
